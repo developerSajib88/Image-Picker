@@ -34,6 +34,7 @@ class _MyWidgetState extends State<MyWidget> {
   File? galleryImage;
 
 
+  // This method for Multi Image picker
   Future multiFilePicker()async{
 
     ImagePicker imagePicker = ImagePicker();
@@ -41,6 +42,7 @@ class _MyWidgetState extends State<MyWidget> {
     setState(() {});
   }
 
+  //This method for pick image from camera
   Future pickFromCamera()async{
    ImagePicker imagePicker = ImagePicker();
    XFile? camera = await imagePicker.pickImage(source: ImageSource.camera);
@@ -49,6 +51,7 @@ class _MyWidgetState extends State<MyWidget> {
    setState(() {});
   }
 
+  //This method for pick image from gallery
   pickFromGallery()async{
     ImagePicker imagePicker = ImagePicker();
     XFile? gallery = await imagePicker.pickImage(source: ImageSource.gallery);
